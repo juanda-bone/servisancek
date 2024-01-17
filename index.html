@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hasan Cell</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="jquery.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Cek Nama Servisan</h1>
+
+      <form>
+        <select name="berdasarkan" class="berdasarkan" id="berdasarkan">
+          <option value="2">---- Cari berdasarkan ----</option>
+          <option value="0">ID</option>
+          <option value="2">Nama</option>
+          <option value="3">Tipe HP</option>
+          <option value="4">Kode</option>
+          <option value="5">Status</option>
+          <option value="6">kerusakan</option>
+        </select>
+        <input
+          type="text"
+          id="nama"
+          name="nama"
+          placeholder="Cari"
+          autofocus
+          autocomplete="off"
+          required
+        />
+      </form>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Tanggal</th>
+              <th>Nama</th>
+              <th>HP</th>
+              <th>Kode</th>
+              <th>status</th>
+              <th>kerusakan</th>
+              <th>biaya</th>
+              <th>modal</th>
+              <th>total</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            <tr>
+              <td colspan="10">tidak ada data</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="spinner hide">
+      <div class="loadingio-spinner-spinner-2l1dl97m0le">
+        <div class="ldio-2oefhl9m0sn">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <style type="text/css">
+      @keyframes ldio-2oefhl9m0sn {
+        0% {
+          opacity: 1;
+        }
+
+        100% {
+          opacity: 0;
+        }
+      }
+
+      .ldio-2oefhl9m0sn div {
+        left: 92px;
+        top: 60px;
+        position: absolute;
+        animation: ldio-2oefhl9m0sn linear 1s infinite;
+        background: #fe718d;
+        width: 16px;
+        height: 24px;
+        border-radius: 8px / 12px;
+        transform-origin: 8px 40px;
+      }
+
+      .ldio-2oefhl9m0sn div:nth-child(1) {
+        transform: rotate(0deg);
+        animation-delay: -0.96s;
+        background: #fe718d;
+      }
+
+      .ldio-2oefhl9m0sn div:nth-child(2) {
+        transform: rotate(14.4deg);
+        animation-delay: -0.92s;
+        background: #fe718d;
+      }
+
+      .ldio-2oefhl9m0sn div:nth-child(3) {
+        transform: rotate(28.8deg);
+        animation-delay: -0.88s;
+        background: #fe718d;
+      }
+
+      .ldio-2oefhl9m0sn div:nth-child(4) {
+        transform: rotate(43.2deg);
+        animation-delay: -0.84s;
+        background: #fe718d;
+      }
+
+      .ldio-2oefhl9m0sn div:nth-child(5) {
+        transform: rotate(57.6deg);
+        animation-delay: -0.8s;
+        background: #fe718d;
+      }
+
+      .ldio-2oefhl9m0sn div:nth-child(6) {
+        transform: rotate(72deg);
+        animation-delay: -0.76s;
+        background: #fe718d;
+      }
+
+      .ldio-2oefhl9m0sn div:nth-child(7) {
+        transform: rotate(86.4deg);
+        animation-delay: -0.72s;
+        background: #fe718d;
+      }
+
+      .ldio-2oefhl9m0sn div:nth-child(8) {
+        transform: rotate(100.8deg);
+        animation-delay: -0.68s;
+        background: #fe718d;
+      }
+
+      .ldio-2oefhl9m0sn div:nth-child(9) {
+        transform: rotate(115.2deg);
+        animation-delay: -0.64s;
+        background: #fe718d;
+      }
+
+      .ldio-2oefhl9m0sn div:nth-child(10) {
+        transform: rotate(129.6deg);
+        animation-delay: -0.6s;
+        background: #fe718d;
+      }
+
+      .ldio-2oefhl9m0sn div:nth-child(11) {
+        transform: rotate(144deg);
+        animation-delay: -0.56s;
+        background: #fe718d;
+      }
+
+      .ldio-2oefhl9m0sn div:nth-child(12) {
+        transform: rotate(158.4deg);
+        animation-delay: -0.52s;
+        background: #fe718d;
+      }
+
+      .ldio-2oefhl9m0sn div:nth-child(13) {
+        transform: rotate(172.8deg);
+        animation-delay: -0.48s;
+        background: #fe718d;
+      }
+
+      .ldio-2oefhl9m0sn div:nth-child(14) {
+        transform: rotate(187.2deg);
+        animation-delay: -0.44s;
+        background: #fe718d;
+      }
+
+      .ldio-2oefhl9m0sn div:nth-child(15) {
+        transform: rotate(201.6deg);
+        animation-delay: -0.4s;
+        background: #fe718d;
+      }
+
+      .ldio-2oefhl9m0sn div:nth-child(16) {
+        transform: rotate(216deg);
+        animation-delay: -0.36s;
+        background: #fe718d;
+      }
+
+      .ldio-2oefhl9m0sn div:nth-child(17) {
+        transform: rotate(230.4deg);
+        animation-delay: -0.32s;
+        background: #fe718d;
+      }
+
+      .ldio-2oefhl9m0sn div:nth-child(18) {
+        transform: rotate(244.8deg);
+        animation-delay: -0.28s;
+        background: #fe718d;
+      }
+
+      .ldio-2oefhl9m0sn div:nth-child(19) {
+        transform: rotate(259.2deg);
+        animation-delay: -0.24s;
+        background: #fe718d;
+      }
+
+      .ldio-2oefhl9m0sn div:nth-child(20) {
+        transform: rotate(273.6deg);
+        animation-delay: -0.2s;
+        background: #fe718d;
+      }
+
+      .ldio-2oefhl9m0sn div:nth-child(21) {
+        transform: rotate(288deg);
+        animation-delay: -0.16s;
+        background: #fe718d;
+      }
+
+      .ldio-2oefhl9m0sn div:nth-child(22) {
+        transform: rotate(302.4deg);
+        animation-delay: -0.12s;
+        background: #fe718d;
+      }
+
+      .ldio-2oefhl9m0sn div:nth-child(23) {
+        transform: rotate(316.8deg);
+        animation-delay: -0.08s;
+        background: #fe718d;
+      }
+
+      .ldio-2oefhl9m0sn div:nth-child(24) {
+        transform: rotate(331.2deg);
+        animation-delay: -0.04s;
+        background: #fe718d;
+      }
+
+      .ldio-2oefhl9m0sn div:nth-child(25) {
+        transform: rotate(345.6deg);
+        animation-delay: 0s;
+        background: #fe718d;
+      }
+
+      .loadingio-spinner-spinner-2l1dl97m0le {
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        overflow: hidden;
+        background: #e6f0e2;
+      }
+
+      .ldio-2oefhl9m0sn {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform: translateZ(0) scale(1);
+        backface-visibility: hidden;
+        transform-origin: 0 0;
+        /* see note above */
+      }
+
+      .ldio-2oefhl9m0sn div {
+        box-sizing: content-box;
+      }
+
+      /* generated by https://loading.io/ */
+    </style>
+
+    <script></script>
+    <script src="script.js"></script>
+  </body>
+</html>
